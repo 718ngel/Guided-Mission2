@@ -2,13 +2,29 @@
 
 ## Commit & Push automatique
 
-Après chaque modification de fichier, effectue automatiquement les étapes suivantes :
+After every file modification, automatically run:
 
 ```bash
-git add .
-git commit -m "description courte de la modification"
+git add <modified files>   # never use git add -A or git add . blindly
+git commit -m "short description in English of what changed"
 git push
 ```
+
+**Remote:** `https://github.com/718ngel/Guided-Mission2.git`
+**Token:** stored in Claude memory — retrieve with:
+`cat ~/.claude/projects/-Users-angela-Desktop----------Term-Project/memory/project_github_token.md`
+
+Set the remote URL with token when needed:
+```bash
+git remote set-url origin "https://TOKEN@github.com/718ngel/Guided-Mission2.git"
+```
+
+Commit message rules:
+- Written in **English**
+- Describe what changed and why, not just the file name
+- Always append: `Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>`
+
+If `git push` fails with HTTP 400 or authentication error, retrieve the token from memory and update the remote URL above.
 
 ## Fichiers à ne JAMAIS committer
 
