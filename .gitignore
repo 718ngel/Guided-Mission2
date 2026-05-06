@@ -1,0 +1,24 @@
+# Données biologiques lourdes
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.sam
+*.gtf
+*.gtf.gz
+*.tar
+*.tar.gz
+*.zip
+*.bigwig
+*.bw
+
+# Dossiers de données
+data/
+work/
+colab-biolab/
+
+# Fichiers système
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
